@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style data-styles="">
+      ion-icon {
+        visibility: hidden;
+      }
+      .hydrated {
+        visibility: inherit;
+      }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temuujin Portfolio</title>
+    <!--- favicon -->
+    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+    <!--- custom css link -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!--- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet">
+    <style>
+      /* Preloader styles */
+      #preloader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .spinner img {
+        width: 150px;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="spinner">
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnozY3hldml6aDN2azhhcW9obnNjZXh4YmV2ZHhvam9vY3dlN292aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6ozxlSeH8IXUmoxO/giphy.gif" alt="Loading...">
+      </div>
+    </div>
+    <header>
+      <button id="theme-toggle" class="theme-toggle">
+        <ion-icon name="moon-outline" id="theme-icon"></ion-icon>
+      </button>
+    </header>
+    <main>
+      <!--- #SIDEBAR -->
+      <aside class="sidebar" data-sidebar="">
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img src="./assets/image/logo.gif" alt="Henry Ford" width="80">
+          </figure>
+          <div class="info-content">
+            <h1 class="name" title="Henry Ford">Henry Ford</h1>
+            <p class="title">Machine Learning, Deep Learning, and AI Student</p>
+          </div>
+          <button class="info_more-btn" data-sidebar-btn="">
+            <span>Show Contacts</span>
+            <ion-icon name="chevron-down" role="img" class="md hydrated" aria-label="chevron down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline" role="img" class="md hydrated" aria-label="mail outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+                <a href="mailto:temkaserge@example.com" class="contact-link">temkaserge@example.com</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline" role="img" class="md hydrated" aria-label="phone portrait outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+                <a href="tel:+111111111" class="contact-link">+111111111</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="calendar-outline" role="img" class="md hydrated" aria-label="calendar outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Birthday</p>
+                <time datetime="1982-06-23">February 22, 2022</time>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline" role="img" class="md hydrated" aria-label="location outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+                <address>Mexia, Texas</address>
+              </div>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram" role="img" class="md hydrated" aria-label="logo instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--- #MAIN CONTENT -->
+      <div class="main-content">
+        <!--- #NAVBAR -->
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link="">About</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link="">Resume</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link="">Portfolio</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link="">Blog</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link="">Contact</button>
+            </li>
+          </ul>
+        </nav>
+
+        <!--- #ABOUT -->
+        <article class="about active" data-page="about">
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
+          <section class="about-text">
+            <p>
+              I'm a student specializing in Machine Learning, Deep Learning, and Artificial Intelligence. I enjoy solving complex problems and creating intelligent systems that can learn and adapt.
+            </p>
+            <p>
+              My goal is to develop innovative solutions that leverage the power of AI to improve various aspects of life. I am passionate about exploring new technologies and continuously enhancing my skills in this rapidly evolving field.
+            </p>
+          </section>
+
+          <!--- Service Section -->
+          <section class="service">
+            <h3 class="h3 service-title">What I'm doing</h3>
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web design</h4>
+                  <p class="service-item-text">
+                    The most modern and high-quality design made at a professional level.
+                  </p>
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web development</h4>
+                  <p class="service-item-text">
+                    High-quality development of sites at the professional level.
+                  </p>
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Mobile apps</h4>
+                  <p class="service-item-text">
+                    Professional development of applications for iOS and Android.
+                  </p>
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Photography</h4>
+                  <p class="service-item-text">
+                    I make high-quality photos of any category at a professional level.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!--- Clients Section -->
+          <section class="clients">
+            <h3 class="h3 clients-title">Clients</h3>
+            <ul class="clients-list has-scrollbar">
+              <li class="clients-item">
+                <a href="#">
+                  <img src="./assets/images/logo-1-color.png" alt="client logo">
+                </a>
+              </li>
+              <li class="clients-item">
+                <a href="#">
+                  <img src="./assets/images/logo-2-color.png" alt="client logo">
+                </a>
+              </li>
+              <li class="clients-item">
+                <a href="#">
+                  <img src="./assets/images/logo-3-color.png" alt="client logo">
+                </a>
+              </li>
+              <li class="clients-item">
+                <a href="#">
+                  <img src="./assets/images/logo-4-color.png" alt="client logo">
+                </a>
+              </li>
+              <li class="clients-item">
+                <a href="#">
+                  <img src="./assets/images/logo-5-color.png" alt="client logo">
+                </a>
+              </li>
+              <li class="clients-item">
+                <a href="#">
+                  <img src="./assets/images/logo-6-color.png" alt="client logo">
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--- #RESUME -->
+        <article class="resume" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline" role="img" class="md hydrated" aria-label="book outline"></ion-icon>
+              </div>
+              <h3 class="h3">Education</h3>
+            </div>
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">University of AI and Robotics</h4>
+                <span>2023 — Present</span>
+                <p class="timeline-text">
+                  Pursuing a degree in Artificial Intelligence with a focus on Machine Learning and Deep Learning. Engaged in various projects and research to develop cutting-edge AI solutions.
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Online AI Courses</h4>
+                <span>2022 — 2023</span>
+                <p class="timeline-text">
+                  Completed several online courses on platforms like Coursera and Udemy, covering topics such as neural networks, natural language processing, and computer vision.
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">University School of the Arts</h4>
+                <span>2007 — 2008</span>
+                <p class="timeline-text">
+                  Studied various forms of art and design, gaining a strong foundation in creative thinking and visual communication.
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">New York Academy of Art</h4>
+                <span>2006 — 2007</span>
+                <p class="timeline-text">
+                  Focused on fine arts and developed skills in painting, sculpture, and other traditional art forms.
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">High School of Art and Design</h4>
+                <span>2002 — 2004</span>
+                <p class="timeline-text">
+                  Received a comprehensive education in various artistic disciplines, preparing for a career in the creative industry.
+                </p>
+              </li>
+            </ol>
+          </section>
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="briefcase-outline" role="img" class="md hydrated" aria-label="briefcase outline"></ion-icon>
+              </div>
+              <h3 class="h3">Experience</h3>
+            </div>
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Creative Director</h4>
+                <span>2015 — Present</span>
+                <p class="timeline-text">
+                  Led a team of designers and developers to create innovative digital solutions for various clients.
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Art Director</h4>
+                <span>2013 — 2015</span>
+                <p class="timeline-text">
+                  Oversaw the visual aspects of projects, ensuring high-quality design and consistency across all media.
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Web Designer</h4>
+                <span>2010 — 2013</span>
+                <p class="timeline-text">
+                  Designed and developed websites for various clients, focusing on user experience and visual appeal.
+                </p>
+              </li>
+            </ol>
+          </section>
+          <section class="skill">
+            <h3 class="h3 skills-title">My skills</h3>
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Machine Learning</h5>
+                  <data value="85">85%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 85%;"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Deep Learning</h5>
+                  <data value="80">80%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%;"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Artificial Intelligence</h5>
+                  <data value="90">90%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%;"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Python Programming</h5>
+                  <data value="75">75%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 75%;"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Web Design</h5>
+                  <data value="80">80%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%;"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Graphic Design</h5>
+                  <data value="70">70%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%;"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Branding</h5>
+                  <data value="90">90%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%;"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">WordPress</h5>
+                  <data value="50">50%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 50%;"></div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section class="certificates">
+            <h3 class="h3 certificates-title">Online Certificates</h3>
+            <ul class="certificates-list">
+              <li class="certificate-item">
+                <h4 class="h4 certificate-title">Full Stack Web Development</h4>
+                <span>2021 — Coursera</span>
+                <p class="certificate-text">
+                  Completed a comprehensive course on full stack web development, covering both front-end and back-end technologies.
+                </p>
+              </li>
+              <li class="certificate-item">
+                <h4 class="h4 certificate-title">UI/UX Design Specialization</h4>
+                <span>2020 — Udemy</span>
+                <p class="certificate-text">
+                  Gained expertise in user interface and user experience design through a series of hands-on projects and assignments.
+                </p>
+              </li>
+              <li class="certificate-item">
+                <h4 class="h4 certificate-title">JavaScript Algorithms and Data Structures</h4>
+                <span>2019 — freeCodeCamp</span>
+                <p class="certificate-text">
+                  Mastered JavaScript algorithms and data structures, including problem-solving techniques and best practices.
+                </p>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--- #PORTFOLIO -->
+        <article class="portfolio" data-page="portfolio">
+          <header>
+            <h2 class="h2 article-title">Portfolio</h2>
+          </header>
+          <section class="projects">
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active" data-filter-btn="">All</button>
+              </li>
+              <li class="filter-item">
+                <button data-filter-btn="">Machine Learning</button>
+              </li>
+              <li class="filter-item">
+                <button data-filter-btn="">Deep Learning</button>
+              </li>
+              <li class="filter-item">
+                <button data-filter-btn="">AI Projects</button>
+              </li>
+            </ul>
+            <div class="filter-select-box">
+              <button class="filter-select" data-select="">
+                <div class="select-value" data-selecct-value="">Select category</div>
+                <div class="select-icon">
+                  <ion-icon name="chevron-down" role="img" class="md hydrated" aria-label="chevron down"></ion-icon>
+                </div>
+              </button>
+              <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item="">All</button>
+                </li>
+                <li class="select-item">
+                  <button data-select-item="">Machine Learning</button>
+                </li>
+                <li class="select-item">
+                  <button data-select-item="">Deep Learning</button>
+                </li>
+                <li class="select-item">
+                  <button data-select-item="">AI Projects</button>
+                </li>
+              </ul>
+            </div>
+            <ul class="project-list">
+              <li class="project-item active" data-filter-item="" data-category="machine learning">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline" role="img" class="md hydrated" aria-label="eye outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/project-ml-1.jpg" alt="ML Project 1" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Predictive Analytics</h3>
+                  <p class="project-category">Machine Learning</p>
+                  <p class="project-description">Developed a predictive analytics model to forecast sales trends using historical data and machine learning algorithms.</p>
+                </a>
+              </li>
+              <li class="project-item active" data-filter-item="" data-category="deep learning">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline" role="img" class="md hydrated" aria-label="eye outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/project-dl-1.jpg" alt="DL Project 1" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Image Classification</h3>
+                  <p class="project-category">Deep Learning</p>
+                  <p class="project-description">Implemented a deep learning model for image classification, achieving high accuracy on a diverse dataset.</p>
+                </a>
+              </li>
+              <li class="project-item active" data-filter-item="" data-category="ai projects">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline" role="img" class="md hydrated" aria-label="eye outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/project-ai-1.jpg" alt="AI Project 1" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Natural Language Processing</h3>
+                  <p class="project-category">AI Projects</p>
+                  <p class="project-description">Developed an NLP model to analyze and extract insights from large volumes of text data.</p>
+                </a>
+              </li>
+              <li class="project-item active" data-filter-item="" data-category="machine learning">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline" role="img" class="md hydrated" aria-label="eye outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/project-ml-2.jpg" alt="ML Project 2" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Customer Segmentation</h3>
+                  <p class="project-category">Machine Learning</p>
+                  <p class="project-description">Created a customer segmentation model to identify distinct customer groups and tailor marketing strategies accordingly.</p>
+                </a>
+              </li>
+              <li class="project-item active" data-filter-item="" data-category="deep learning">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline" role="img" class="md hydrated" aria-label="eye outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/project-dl-2.jpg" alt="DL Project 2" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Speech Recognition</h3>
+                  <p class="project-category">Deep Learning</p>
+                  <p class="project-description">Developed a speech recognition system using deep learning techniques to accurately transcribe spoken language.</p>
+                </a>
+              </li>
+              <li class="project-item active" data-filter-item="" data-category="ai projects">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline" role="img" class="md hydrated" aria-label="eye outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/project-ai-2.jpg" alt="AI Project 2" loading="lazy">
+                  </figure>
+                  <h3 class="project-title">Chatbot Development</h3>
+                  <p class="project-category">AI Projects</p>
+                  <p class="project-description">Built an intelligent chatbot capable of understanding and responding to user queries in natural language.</p>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--- #BLOG -->
+        <article class="blog" data-page="blog">
+          <header>
+            <h2 class="h2 article-title">Blog</h2>
+          </header>
+          <section class="blog-posts">
+            <ul class="blog-posts-list">
+              <li class="blog-post-item">
+                <a href="#" class="blog-link" data-blog-id="1">
+                  <figure class="blog-banner-box">
+                    <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                  </figure>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
+                      <span class="dot"></span>
+                      <time datetime="2022-02-23">Feb 23, 2022</time>
+                    </div>
+                    <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+                    <p class="blog-text">
+                      Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="blog-post-item">
+                <a href="#" class="blog-link" data-blog-id="2">
+                  <figure class="blog-banner-box">
+                    <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                  </figure>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
+                      <span class="dot"></span>
+                      <time datetime="2022-02-23">Feb 23, 2022</time>
+                    </div>
+                    <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+                    <p class="blog-text">
+                      Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <!-- Add more blog posts here -->
+            </ul>
+          </section>
+        </article>
+
+        <!-- Blog Modal -->
+        <div id="blog-modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="blog-modal-content"></div>
+          </div>
+        </div>
+
+        <!--- #CONTACT -->
+        <article class="contact" data-page="contact">
+          <header>
+            <h2 class="h2 article-title">Contact</h2>
+          </header>
+          <section class="mapbox" data-mapbox="">
+            <figure>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+                width="400"
+                height="300"
+                loading="lazy"></iframe>
+            </figure>
+          </section>
+          <section class="contact-form">
+            <h3 class="h3 form-title">Contact Form</h3>
+            <form action="#" class="form" data-form="">
+              <div class="input-wrapper">
+                <input type="text" name="fullname" class="form-input" placeholder="Full name" required="" data-form-input="">
+                <input type="email" name="email" class="form-input" placeholder="Email address" required="" data-form-input="">
+              </div>
+              <textarea name="message" class="form-input" placeholder="Your Message" required="" data-form-input=""></textarea>
+              <button class="form-btn" type="submit" disabled="" data-form-btn="">
+                <ion-icon name="paper-plane" role="img" class="md hydrated" aria-label="paper plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!--- custom js link -->
+    <script src="./assets/js/script.js"></script>
+    <!--- ionicon link -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Add this script at the end of the body -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const blogLinks = document.querySelectorAll('.blog-link');
+        const modal = document.getElementById('blog-modal');
+        const modalContent = document.getElementById('blog-modal-content');
+        const closeModal = document.querySelector('.close');
+
+        blogLinks.forEach(link => {
+          link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const blogId = this.getAttribute('data-blog-id');
+            // Fetch blog content based on blogId (for simplicity, using static content here)
+            let blogContent = '';
+            if (blogId === '1') {
+              blogContent = `
+                <h2>Design conferences in 2022</h2>
+                <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" style="width: 100%; height: auto; margin-bottom: 20px;">
+                <p>Veritatis et quasi architecto beatae vitae dicta sunt, explicabo...</p>
+                <pre><code class="language-javascript">const example = 'Hello, World!';\nconsole.log(example);</code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+              `;
+            } else if (blogId === '2') {
+              blogContent = `
+                <h2>Best fonts every designer</h2>
+                <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" style="width: 100%; height: auto; margin-bottom: 20px;">
+                <p>Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi...</p>
+                <pre><code class="language-css">body {\n  font-family: 'Poppins', sans-serif;\n}</code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+              `;
+            }
+            modalContent.innerHTML = blogContent;
+            modal.style.display = 'block';
+          });
+        });
+
+        closeModal.addEventListener('click', function () {
+          modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function (event) {
+          if (event.target === modal) {
+            modal.style.display = 'none';
+          }
+        });
+      });
+
+      function copyCode(button) {
+        const code = button.previousElementSibling.textContent;
+        navigator.clipboard.writeText(code).then(() => {
+          button.textContent = 'Copied!';
+          setTimeout(() => {
+            button.textContent = 'Copy Code';
+          }, 2000);
+        });
+      }
+    </script>
+
+    <script>
+      window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        preloader.style.display = 'none';
+      });
+    </script>
+
+    <script>
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const preloader = document.getElementById('preloader');
+          preloader.style.display = 'none';
+        }, 150000); // 15 seconds
+      });
+    </script>
+
+    <style>
+      /* Modal styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .modal-content {
+        background-color: #333;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 800px;
+        color: #fff;
+        border-radius: 10px;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      pre {
+        background: #444;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+
+      .copy-btn {
+        background: #555;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .copy-btn:hover {
+        background: #666;
+      }
+    </style>
+  </body>
+</html>

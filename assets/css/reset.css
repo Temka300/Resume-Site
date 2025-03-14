@@ -1,0 +1,76 @@
+/* Reset styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+ion-icon,
+a,
+button,
+time,
+span {
+  display: block;
+}
+
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  background: none;
+  font: inherit;
+}
+
+::selection {
+  background: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+}
+
+:focus {
+  outline-color: var(--orange-yellow-crayola);
+}
+
+html {
+  font-family: var(--ff-poppins);
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.light-mode {
+  --bg-color: var(--white-1);
+  --text-color: var(--eerie-black-2);
+  --icon-color: var(--bittersweet-shimmer);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--icon-color);
+}
