@@ -1014,7 +1014,7 @@
     background: var(--eerie-black-2);
     color: var (--light-gray);
     font-size: var(--fs-6);
-    font-weight: var(--fw-300);
+    font-weight: var (--fw-300);
     text-transform: capitalize;
     width: 100%;
     padding: 8px 10px;
@@ -2067,4 +2067,22 @@
   .spinner img {
     width: 150px;
     height: 150px;
+  }
+
+  /* Modal Open Button */
+  .modal-open-button {
+    background-color: #6e57e0;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    margin-left: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-open-button:hover {
+    background-color: #5a46c2;
   }

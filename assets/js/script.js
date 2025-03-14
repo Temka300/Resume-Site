@@ -34,3 +34,45 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// Navbar and modal functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('.navbar');
+    const modalCloseButtons = document.querySelectorAll('.modal-close-button');
+
+    // Function to hide the navbar
+    function hideNavbar() {
+        navbar.style.display = 'none';
+    }
+
+    // Function to show the navbar
+    function showNavbar() {
+        navbar.style.display = 'block';
+    }
+
+    // Make these functions available globally
+    window.hideNavbar = hideNavbar;
+    window.showNavbar = showNavbar;
+
+    // Event listeners for all modal close buttons
+    modalCloseButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                modal.style.display = 'none';
+            });
+            showNavbar();
+        });
+    });
+
+    // Close modal when clicking outside of it
+    window.addEventListener('click', function(event) {
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                showNavbar();
+            }
+        });
+    });
+});
