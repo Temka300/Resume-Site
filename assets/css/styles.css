@@ -2611,6 +2611,45 @@ article.active {
     background-color: #5a46c2;
   }
 
+/* Certificate section styles */
+.certificate {
+  margin-bottom: 15px;
+}
+
+.certificate-title {
+  margin-bottom: 20px;
+}
+
+.certificate-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 0 -15px;
+  padding: 25px;
+  padding-bottom: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 25px;
+}
+
+.certificate-item {
+  min-width: 50%;
+  scroll-snap-align: start;
+}
+
+.certificate-item img {
+  width: 100%;
+  filter: grayscale(1);
+  transition: var(--transition-1);
+}
+
+.certificate-item img:hover {
+  filter: grayscale(0);
+}
+
 /* Custom properties */
 :root {
     /**
